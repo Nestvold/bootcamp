@@ -36,5 +36,5 @@ variables:
       icapi_extractors_client_secret: ${ICAPI_EXTRACTORS_CLIENT_SECRET}
       
       # Custom
-      icapi_ds_external_id: 'ds_icapi'
-      uc_oee_ds_external_id: 'ds_uc_oee'
+      icapi_ds_external_id: ds_icapi
+      uc_oee_ds_external_id: ds_uc_oee
