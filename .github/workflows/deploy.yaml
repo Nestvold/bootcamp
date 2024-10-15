@@ -16,11 +16,20 @@ jobs:
     runs-on: ubuntu-latest
     environment: test
     env:
-        CDF_CLUSTER: ${{ vars.CDF_CLUSTER }}
         CDF_PROJECT: ${{ vars.CDF_PROJECT }}
         IDP_CLIENT_ID: ${{ vars.IDP_CLIENT_ID }}
-        IDP_CLIENT_SECRET: ${{ secrets.IDP_CLIENT_SECRET }}
         IDP_TOKEN_URL: ${{ vars.IDP_TOKEN_URL }}
+        DATA_DEVELOPER_OBJECT_ID: ${{ vars.DATA_DEVELOPER_OBJECT_ID }}
+        DATA_PIPELINE_OEE_OBJECT_ID: ${{ vars.DATA_PIPELINE_OEE_OBJECT_ID }}
+        ICAPI_EXTRACTORS_OBJECT_ID: ${{ vars.ICAPI_EXTRACTORS_OBJECT_ID }}
+        DATA_PIPELINE_OEE_CLIENT_ID: ${{ vars.DATA_PIPELINE_OEE_CLIENT_ID }}
+        ICAPI_EXTRACTORS_CLIENT_ID: ${{ vars.ICAPI_EXTRACTORS_CLIENT_ID }}
+        CDF_CLUSTER: ${{ vars.CDF_CLUSTER }}
+        
+        IDP_CLIENT_SECRET: ${{ secrets.IDP_CLIENT_SECRET }}
+        IDP_TENANT_ID: ${ secrets.IDP_TENANT_ID }
+        DATA_PIPELINE_OEE_CLIENT_SECRET: ${{ secrets.DATA_PIPELINE_OEE_CLIENT_SECRET }}
+        ICAPI_EXTRACTORS_CLIENT_SECRET: ${{ secrets.ICAPI_EXTRACTORS_CLIENT_SECRET }}
     name: Deploy
     steps:
       - uses: actions/checkout@v4
