@@ -1,4 +1,4 @@
-name: Deploy modules to prod project
+name: Deploy modules to test project
 on:
   push:
     branches:
@@ -19,13 +19,15 @@ jobs:
         CDF_PROJECT: ${{ vars.CDF_PROJECT }}
         IDP_CLIENT_ID: ${{ vars.IDP_CLIENT_ID }}
         IDP_TOKEN_URL: ${{ vars.IDP_TOKEN_URL }}
-        DATA_DEVELOPER_OBJECT_ID: ${{ vars.DATA_DEVELOPER_OBJECT_ID }}
-        DATA_PIPELINE_OEE_OBJECT_ID: ${{ vars.DATA_PIPELINE_OEE_OBJECT_ID }}
-        ICAPI_EXTRACTORS_OBJECT_ID: ${{ vars.ICAPI_EXTRACTORS_OBJECT_ID }}
         DATA_PIPELINE_OEE_CLIENT_ID: ${{ vars.DATA_PIPELINE_OEE_CLIENT_ID }}
         ICAPI_EXTRACTORS_CLIENT_ID: ${{ vars.ICAPI_EXTRACTORS_CLIENT_ID }}
         CDF_CLUSTER: ${{ vars.CDF_CLUSTER }}
         IDP_TENANT_ID: ${{ secrets.IDP_TENANT_ID }}
+
+        data_developer_source_id: ${{ vars.DATA_DEVELOPER_OBJECT_ID }}
+        data_pipeline_oee_source_id: ${{ vars.DATA_PIPELINE_OEE_OBJECT_ID }}
+        icapi_extractors_source_id: ${{ vars.ICAPI_EXTRACTORS_OBJECT_ID }}
+
         IDP_CLIENT_SECRET: ${{ secrets.IDP_CLIENT_SECRET }}
         DATA_PIPELINE_OEE_CLIENT_SECRET: ${{ secrets.DATA_PIPELINE_OEE_CLIENT_SECRET }}
         ICAPI_EXTRACTORS_CLIENT_SECRET: ${{ secrets.ICAPI_EXTRACTORS_CLIENT_SECRET }}
